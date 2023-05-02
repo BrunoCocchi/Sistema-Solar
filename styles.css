@@ -1,0 +1,196 @@
+    body {
+        background-color: #000; /* define a cor de fundo como preto */
+        background-image: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1193&q=80"); /* adiciona a imagem de estrelas como background */
+        background-repeat: repeat; /* define que a imagem de fundo deve ser repetida em toda a tela */
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: black;
+
+        overflow: hidden;   
+    }
+
+    .container {
+        font-size: 10px;
+        width: 40em;
+        height: 40em;
+        position: relative;
+    }
+
+    .sol {
+        position: absolute;
+        right: 70em;
+        width: 40em;
+        height: 40em;
+        background-image: linear-gradient(135deg, yellow  0%, #FF8C00 100%), 
+                        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+                        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);                                                                           
+        border-radius: 50%;
+        box-shadow: 0px 0px 100px gold;
+    }
+
+
+
+
+
+    .terra, .lua, .mercurio, .venus, .marte, .jupter, .saturno, .urano, .netuno, .plutao {
+        position: absolute;
+        border-style: solid;
+        border-width: 0.1em 0.1em 0.0;
+        border-radius: 50%;    
+    }
+
+
+
+    .lua {
+        bottom: 30em;
+        right: 35em;
+        width: 1.5em;
+        height: 1.5em;
+        background-color: white;
+        box-shadow: 0px  0px 20px white;
+    }
+
+    .mercurio {
+        bottom: 17em;
+        right: 60em;
+        width: 4em;
+        height: 4em;
+        background-color: rgb(172, 97, 24) ;
+        box-shadow: 0px 0px 30px peru;
+    }
+
+    .venus {
+        bottom: 16em;
+        right: 48em;
+        width: 6.4em;
+        height: 6.4em;
+        box-shadow: 0px 0px 30px rgb(139, 114, 70);
+        background-image: linear-gradient(135deg, rgb(214, 195, 162)  0%, rgb(175, 144, 106) 100%), 
+        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);
+
+    }
+
+    .terra {
+        right: 36em;
+        bottom: 16em;   
+        width: 7em;
+        height: 7em;
+        box-shadow: 0px 0px 30px rgb(27, 108, 165);
+        background-image: linear-gradient(135deg, rgb(32, 201, 236)  0%, rgb(0, 139, 187) 100%), 
+        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);
+        
+    }
+
+    .marte {
+        bottom: 16.6em;
+        right: 24.7em;
+        width: 5.7em;
+        height: 5.7em;
+        box-shadow: 0px 0px 30px rgb(196, 60, 18);
+        background-image: linear-gradient(135deg, rgb(252, 169, 51)  0%, rgb(168, 135, 9) 100%), 
+        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);
+
+    }
+
+    .jupter {
+        bottom: 12em;
+        right: 4em;
+        width: 16em;
+        height: 16em;
+        background-color: rgb(175, 144, 106)  ;
+        box-shadow: 0px 0px 30px rgb(175, 144, 106);
+        background-image: linear-gradient(135deg, rgb(168, 127, 91)  0%, rgb(38, 87, 102) 100%), 
+        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);
+    }
+
+
+
+    .saturno {
+        width: 14em;
+        height: 14em; 
+        box-shadow: 0px 0px 30px rgb(175, 144, 106);
+        background-image: linear-gradient(135deg, rgb(218, 177, 142)  0%, rgb(190, 143, 101) 100%), 
+        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);
+        transform: rotateX(-60deg);
+
+    }
+
+    .ringsSat {
+        position: absolute;
+        width: 230px;
+        height: 350px;
+        left: 37.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: solid 20px rgb(108, 115, 143);
+        transform: rotate3d(1,  0.3, 0, 70deg);
+        transform-style: preserve-3d;
+
+
+    }
+
+
+    .ringsSat::before {
+        content: '';
+        position: absolute;
+        width: 85%;
+        height: 85%;
+        border-radius: 50%;
+        border: 20px solid rgb(110, 107, 107);
+    }
+
+    .ringsSat::after {
+        content: "";
+        position: absolute;
+        width: 85%;
+        height: 85%;
+        border-radius: 50%;
+        border: solid 20px rgb(110, 107, 107);
+    }
+    
+    .urano {
+        bottom: 17em;
+        left: 66em;
+        width: 6.2em;
+        height: 6.2em;
+        background-color: rgb(175, 144, 106)  ;
+        box-shadow: 0px 0px 30px rgb(50, 226, 243);
+        background-image: linear-gradient(135deg, rgb(11, 88, 225)  0%, rgb(50, 226, 243) 100%), 
+        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);
+    }
+
+    .netuno {
+        bottom: 17em;
+        left: 77em;
+        width: 6em;
+        height: 6em;
+        background-color: rgb(175, 144, 106)  ;
+        box-shadow: 0px 0px 30px rgb(33, 168, 250);
+        background-image: linear-gradient(135deg, rgb(33, 168, 250)  0%, rgb(8, 45, 169) 100%), 
+        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);
+    }
+
+    .plutao {
+        bottom: 18em;
+        left: 87em;
+        width: 3.4em;
+        height: 3.4em;
+        background-color: rgb(175, 144, 106)  ;
+        box-shadow: 0px 0px 30px rgb(83, 144, 160);
+        background-image: linear-gradient(135deg, rgb(83, 144, 160)  0%, rgb(196, 233, 239) 100%), 
+        radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%), 
+        radial-gradient(circle at center, rgb(244,240,19) 0%, rgba(255,255,255,0) 50%);
+    }
